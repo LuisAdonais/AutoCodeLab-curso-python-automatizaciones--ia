@@ -13,9 +13,7 @@
 <!-- Header -->
 <header class="bg-white shadow fixed w-full z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-        <div class="text-2xl font-bold text-blue-600 flex items-center">
-            🐍 Auto Code Lab
-        </div>
+        <div class="text-2xl font-bold text-blue-600 flex items-center">🐍 Auto Code Lab</div>
         <nav class="space-x-4 hidden md:flex">
             <a href="#inicio" class="hover:text-blue-600">Inicio</a>
             <a href="#sobre" class="hover:text-blue-600">Sobre el Curso</a>
@@ -24,9 +22,7 @@
             <a href="#recursos" class="hover:text-blue-600">Recursos</a>
             <a href="#faq" class="hover:text-blue-600">FAQ</a>
         </nav>
-        <button class="md:hidden text-gray-700" @click="open = !open" x-data="{open:false}">
-            ☰
-        </button>
+        <button class="md:hidden text-gray-700" @click="open = !open" x-data="{open:false}">☰</button>
     </div>
 </header>
 
@@ -66,7 +62,6 @@
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-10">Módulos del Curso</h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <!-- Card de módulo -->
             <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
                 <h3 class="font-bold text-xl mb-2 cursor-pointer" @click="open = !open">Módulo 1: Introducción a Python</h3>
                 <p x-show="open" x-transition>Aprende historia, filosofía y primeros pasos con Python. Configura tu entorno en VS Code y Jupyter Notebook, y ejecuta tu primer script.</p>
@@ -116,4 +111,28 @@
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-10">Recursos Adicionales</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Recurso 1</h3>
+                <p>Enlaces, documentación y materiales complementarios.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Recurso 2</h3>
+                <p>Ejemplos y plantillas de notebooks para practicar.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Recurso 3</h3>
+                <p>Videos, tutoriales y guías paso a paso.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white shadow mt-10 py-6">
+    <div class="max-w-7xl mx-auto text-center text-gray-600">
+        © 2025 Auto Code Lab. Todos los derechos reservados.
+    </div>
+</footer>
+
+</body>
+</html>

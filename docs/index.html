@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Code Lab - Curso de Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1822/1822899.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
+<!-- Header -->
+<header class="bg-white shadow fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <div class="text-2xl font-bold text-blue-600 flex items-center">
+            🐍 Auto Code Lab
+        </div>
+        <nav class="space-x-4 hidden md:flex">
+            <a href="#inicio" class="hover:text-blue-600">Inicio</a>
+            <a href="#sobre" class="hover:text-blue-600">Sobre el Curso</a>
+            <a href="#modulos" class="hover:text-blue-600">Módulos</a>
+            <a href="#ejercicios" class="hover:text-blue-600">Ejercicios</a>
+            <a href="#recursos" class="hover:text-blue-600">Recursos</a>
+            <a href="#faq" class="hover:text-blue-600">FAQ</a>
+        </nav>
+        <button class="md:hidden text-gray-700" @click="open = !open" x-data="{open:false}">
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="inicio" class="bg-blue-600 text-white pt-32 pb-20">
+    <div class="max-w-7xl mx-auto text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Curso Completo de Python</h1>
+        <p class="text-lg md:text-2xl mb-6">Aprende Python desde cero y automatiza tareas laborales</p>
+        <a href="#modulos" class="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Empezar Ahora</a>
+    </div>
+</section>
+
+<!-- Sobre el Curso -->
+<section id="sobre" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Sobre el Curso</h2>
+        <p class="text-center mb-10 max-w-3xl mx-auto">Auto Code Lab te guía paso a paso en Python, desde conceptos básicos hasta automatización laboral. Aprende a crear scripts, analizar datos, y dominar la programación con ejemplos prácticos.</p>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                🐍 <h3 class="font-bold text-xl mt-2">Simplicidad</h3>
+                <p>Scripts claros y fáciles de entender, ideales para principiantes.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                ⚡ <h3 class="font-bold text-xl mt-2">Automatización</h3>
+                <p>Reduce tareas repetitivas y optimiza tu flujo de trabajo.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                🌐 <h3 class="font-bold text-xl mt-2">Versatilidad</h3>
+                <p>Python se aplica en ciencia de datos, web, IA y más.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Módulos -->
+<section id="modulos" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Módulos del Curso</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card de módulo -->
+            <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2 cursor-pointer" @click="open = !open">Módulo 1: Introducción a Python</h3>
+                <p x-show="open" x-transition>Aprende historia, filosofía y primeros pasos con Python. Configura tu entorno en VS Code y Jupyter Notebook, y ejecuta tu primer script.</p>
+            </div>
+            <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2 cursor-pointer" @click="open = !open">Módulo 2: Variables y Tipos de Datos</h3>
+                <p x-show="open" x-transition>Conoce los tipos de datos, operadores y cómo almacenar información en Python de forma eficiente.</p>
+            </div>
+            <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2 cursor-pointer" @click="open = !open">Módulo 3: Condicionales y Bucles</h3>
+                <p x-show="open" x-transition>Aprende a controlar el flujo de tus programas con condicionales, bucles y lógica de decisión.</p>
+            </div>
+            <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2 cursor-pointer" @click="open = !open">Módulo 4: Funciones y Librerías</h3>
+                <p x-show="open" x-transition>Descubre cómo crear funciones reutilizables y utilizar librerías externas para potenciar tus proyectos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ejercicios -->
+<section id="ejercicios" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Ejercicios Prácticos</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Ejercicio 1</h3>
+                <p>Imprime tu nombre y edad usando print().</p>
+                <a href="#" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Practicar</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Ejercicio 2</h3>
+                <p>Realiza operaciones matemáticas básicas y muestra los resultados.</p>
+                <a href="#" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Practicar</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <h3 class="font-bold text-xl mb-2">Ejercicio 3</h3>
+                <p>Crear un notebook con Markdown y código explicativo.</p>
+                <a href="#" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Practicar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recursos -->
+<section id="recursos" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Recursos Adicionales</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-
